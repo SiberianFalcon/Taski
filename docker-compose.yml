@@ -1,32 +1,28 @@
-# docker-compose.production.yml
+# Файл docker-compose.yml
 version: '3'
 
 volumes:
-  pg_data_production:
-  static_volume:
+  pg_data:
 
-# Всё отличие — заменяем build на image и указываем, какой образ использовать
 services:
   db:
     image: postgres:13.10
     env_file: .env
     volumes:
-      - pg_data_production:/var/lib/postgresql/data
+      - pg_data:/var/lib/postgresql/data
   backend:
-    image: username/taski_backend
+    build: ./backend/
     env_file: .env
-    volumes:
-      - static_volume:/backend_static
   frontend:
-    image: username/taski_frontend  # Качаем с Docker Hub
     env_file: .env
-    command: cp -r /app/build/. /frontend_static/
-    volumes:
-      - static_volume:/frontend_static
+    build: ./frontend/
+# Добавляем новый контейнер: gateway.
   gateway:
-    image: username/taski_gateway  # Качаем с Docker Hub
-    env_file: .env
-    volumes:
-      - static_volume:/staticfiles/
+    # Сбилдить и запустить образ, 
+    # описанный в Dockerfile в папке gateway
+    build: ./gateway/
+    # Ключ ports устанавливает
+    # перенаправление всех запросов с порта 8000 хоста
+    # на порт 80 контейнера.
     ports:
       - 8000:80
