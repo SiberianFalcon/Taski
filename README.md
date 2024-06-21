@@ -1,8 +1,9 @@
-![Static Badge](https://img.shields.io/badge/Python-gray) ![Static Badge](https://img.shields.io/badge/Django_Rest_Framework-red?style=flat)
+![Static Badge](https://img.shields.io/badge/Python-gray) ![Static Badge](https://img.shields.io/badge/Django_Rest_Framework-red?style=flat) ![Static Badge](https://img.shields.io/badge/Docker-CI%2FCD-blue)
+
 
 # Taski
 ## Описание
-Приложение для планирования своих задач.
+Приложение для планирования своих задач в контейнере докер с автоматическим обновлением на удалённом сервере.
 
 ## Запуск проекта
 * Скачайте репозиторий командой в терминале ```https://github.com/SiberianFalcon/taski.git```
