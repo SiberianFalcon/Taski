@@ -1,4 +1,5 @@
-![Static Badge](https://img.shields.io/badge/Python-gray) ![Static Badge](https://img.shields.io/badge/Django_Rest_Framework-red?style=flat) ![Static Badge](https://img.shields.io/badge/Docker-CI%2FCD-blue)
+![Static Badge](https://img.shields.io/badge/Python-gray) ![Static Badge](https://img.shields.io/badge/Django_Rest_Framework-red?style=flat) ![Static Badge](https://img.shields.io/badge/Docker-CI%2FCD-blue) ![Static Badge](https://img.shields.io/badge/PostgreSQL-navy)
+
 
 
 # Taski
